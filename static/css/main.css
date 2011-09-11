@@ -79,7 +79,7 @@
 }
 
 /*title*/
-div.title{
+.title{
     border: 1px solid #bbbbbb;
     border-collapse: collapse;
     border-spacing: 0px;
@@ -90,12 +90,12 @@ div.title{
     padding: 5px 0px 5px 0px;
 }
 
-div.message{
+.message{
     margin-top: 10px;
 }
 
 /*filter*/
-div.filter {
+.filter {
     border: 1px solid #bbbbbb;
     border-collapse: collapse;
     border-spacing: 0px;
@@ -103,14 +103,14 @@ div.filter {
     margin-left: -1px;
 }
 
-div.filter .header{
+.filter .header{
     padding-left: 2px;
     font-weight: bold;
     font-size: 13px;
     background-color: #f0f0f0;
 }
 
-div.filter .label{
+.filter .label{
     text-align: right;
     font-weight: bold;
     padding-top: 7px;
@@ -120,12 +120,12 @@ div.filter .label{
     margin-right: 0;
 }
 
-div.filter .button{
+.filter .button{
     text-align: center;
 }
 
 /*list*/
-div.list {
+.list {
     border: 1px solid #bbbbbb;
     border-collapse: collapse;
     border-spacing: 0px;
@@ -134,30 +134,30 @@ div.list {
     margin-left: -1px;
 }
 
-div.list .header {
+.list .header {
     font-weight: bold;
     background-color: #f0f0f0;
     text-align: left;
     color: #003366;
 }
 
-div.list .even {
+.list .even {
   background:   #F7F7F7;
 }
 
-div.list .odd {
+.list .odd {
   background:   #E4F6FF;
 }
 
 /*pagination*/
-div.page {
+.page {
   text-align: center;
   font-family: arial, sans-serif;
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-div.page a {
+.page a {
   padding: 4px 6px;
   margin: 0 3px;
   border: 1px solid #ddd;
@@ -166,21 +166,21 @@ div.page a {
   font-weight: bold;
 }
 
-div.page a:hover {
+.page a:hover {
   border: 1px solid #003366;
   background-color: #0063dc;
   color: #fff;
 }
 
-div.page span {
+.page span {
   padding: 4px 6px;
   font-weight: bold;
 }
 
-div.page span.disabled {
+.page span.disabled {
   color: #b1aab1;
 }
 
-div.page span.current {
+.page span.current {
   color: #ff0084;
 }
