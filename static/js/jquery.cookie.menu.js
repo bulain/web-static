@@ -42,18 +42,18 @@ jQueryMenu = {
         jQuery('#' + sectID).removeClass('header-closed');
         jQuery('#' + sectID).addClass('header-open');
         jQuery('#' + sectID + '_ul').show();
-        jQuery.subcookie("_menu_cookie_", sectID, null);
+        jQuery.subcookie("_menu_cookie_", sectID, null, jQueryMenu.options);
     },
     
     closeMenu: function(sectID){
         jQuery('#' + sectID).removeClass('header-open');
         jQuery('#' + sectID).addClass('header-closed');
         jQuery('#' + sectID + '_ul').hide();
-        jQuery.subcookie("_menu_cookie_", sectID, '0');
+        jQuery.subcookie("_menu_cookie_", sectID, '0', jQueryMenu.options);
     },
     
     toggleMenu: function(sectID){
-        if (jQuery.subcookie("_menu_cookie_", sectID) === null) {
+        if (jQuery.subcookie("_menu_cookie_", sectID, jQueryMenu.options) === null) {
             jQueryMenu.closeMenu(sectID);
         }
         else {
@@ -66,7 +66,7 @@ jQueryMenu = {
      Restores a state of a menu
      */
     restoreMenu: function(sectID){
-        if (jQuery.subcookie("_menu_cookie_", sectID) === null) {
+        if (jQuery.subcookie("_menu_cookie_", sectID, jQueryMenu.options) === null) {
             jQueryMenu.openMenu(sectID);
         }
         else {
