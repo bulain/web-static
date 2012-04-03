@@ -1,10 +1,14 @@
 jQuery.subcookie = function (ckname, key, value, options) {
 	
-	//get cookie
-    var ckvalue = jQuery.cookie(ckname) || "";
+	//get value from cookie
+	if (arguments.length > 3 && String(value) !== "[object Object]") {
+    	options = jQuery.extend({}, options);
+    }else{
+        options = value || {};
+    }
+    var ckvalue = jQuery.cookie(ckname, options) || "";
 	
-    // get value from cookie
-    options = options || {};
+    // get subvalue from cookie
     var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
     var storevalue = (result = new RegExp('(?:^|\|)' + encodeURIComponent(key) + '=([^\|]*)').exec(ckvalue)) ? decode(result[1]) : null;
 	
